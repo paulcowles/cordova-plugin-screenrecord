@@ -142,7 +142,8 @@ public class ScreenRecord extends CordovaPlugin {
                
                Log.d(TAG, "screenrecord service is running");
                this.callbackContext.success("screenrecord service is running");
-               cordova.getActivity().moveTaskToBack(true);
+               // -----  keep service in foreground  -----
+               // cordova.getActivity().moveTaskToBack(true);
            }catch (Exception e){
               e.printStackTrace();
           }
